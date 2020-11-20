@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        if(mainSurface == null)
+       // if(mainSurface == null)
             mainSurface = new MainSurface(this);
 
         setContentView(mainSurface);

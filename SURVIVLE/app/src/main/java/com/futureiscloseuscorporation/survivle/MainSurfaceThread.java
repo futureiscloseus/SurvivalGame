@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.view.SurfaceHolder;
 
 class MainSurfaceThread extends Thread {
@@ -34,12 +35,12 @@ class MainSurfaceThread extends Thread {
     }
     @Override
     public void run() {
-
+        Paint paint =  new Paint();
         while(ingame) {
 
-            mainCanvas = surfaceHolder.lockCanvas(null);
+            mainCanvas = surfaceHolder.lockCanvas();
 
-            mainCanvas.drawBitmap(man,500,500,null);
+            mainCanvas.drawBitmap(man,0,0,null);
 
             surfaceHolder.unlockCanvasAndPost(mainCanvas);
             try {

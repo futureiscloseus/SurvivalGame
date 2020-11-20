@@ -36,11 +36,13 @@ public class MainSurface extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
-        if(mainSurfaceThread == null)
+       // if(mainSurfaceThread == null)
             mainSurfaceThread = new MainSurfaceThread(getHolder(),getResources()) ;
 
-        if(mainSurfaceThread.getState() == Thread.State.NEW)
+      //  if(mainSurfaceThread.getState() == Thread.State.NEW)
+            mainSurfaceThread.setRunning();
             mainSurfaceThread.start();
+
 
     }
     @Override
