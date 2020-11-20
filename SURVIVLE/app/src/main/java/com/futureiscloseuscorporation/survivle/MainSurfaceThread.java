@@ -35,7 +35,7 @@ class MainSurfaceThread extends Thread {
     }
     @Override
     public void run() {
-        Paint paint =  new Paint();
+
         while(ingame) {
 
             mainCanvas = surfaceHolder.lockCanvas();
